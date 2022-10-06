@@ -32,7 +32,7 @@ export const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="#home">
             <img src={""} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -51,7 +51,7 @@ export const NavBar = () => {
                 <a href="#"><img src={""} alt="" /></a>
               </div>
               <HashLink to='#connect'>
-                <button className="vvd"><span>Lets Connect</span></button>
+                <button className="vvd"><span>SHOP</span></button>
               </HashLink>
             </span>
           </Navbar.Collapse>
