@@ -1,10 +1,8 @@
 import React from 'react';
-import Navbar from 'Navbar';
 
 const Home = () => {
     return (
         <div>
-        <Navbar></Navbar>
         <blockquote className="blockquote ">
         <p style={{ textAlign: "justify" }}>
             Hello Everyone, My name is <strong >Ahsan Zaidi. </strong> 
