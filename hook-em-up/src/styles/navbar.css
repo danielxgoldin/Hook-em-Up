@@ -1,0 +1,19 @@
+.n-container {
+    height: 100px;
+    padding: 5px 20px;
+}
+
+.n-email {
+    letter-spacing: 1.5px;
+}
+
+.n-row:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials img {
+    width: 25px;
+    height: auto;
+    margin: 0 5px;
+}
