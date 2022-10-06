@@ -39,7 +39,7 @@ const Navbar = () => {
                     <ul className='items'>
                         <li className='list'>Home</li>
                         <li className='list'>Shop</li>
-                        <li className='list'>About</li>
+                        <li className='list' >About</li>
                         <li className='list'>Contact</li>
                     </ul>
                 </nav>
