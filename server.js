@@ -29,7 +29,7 @@ app.get("/", function (req, res) {
 });
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb:127.0.0.1:27017/Hook-em-Up",
+  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/Hook-em-Up",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
