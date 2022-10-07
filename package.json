@@ -2,14 +2,16 @@
   "name": "hook-em-up",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danielxgoldin/Hook-em-Up.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -18,6 +20,7 @@
   "homepage": "https://github.com/danielxgoldin/Hook-em-Up#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "express-graphql": "^0.12.0",
     "graphql": "^16.6.0",
     "mongoose": "^6.6.5"
   }
