@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
+
 //function to handle login functionality
 const Login = () => {
     const { user, login, setUser, setIsSubmitting, loggedIn } = useAuth()
