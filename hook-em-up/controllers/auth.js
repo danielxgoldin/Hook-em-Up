@@ -1,9 +1,9 @@
 const ErrorResponse = require('../utils/error');
 const checker = require('../utils/validator');
-const { signUp, signIn } = require('../services/authenication.js');
+const { signUp, signIn } = require('../services/authenication');
 
 
-exports.register = (req, res, next) => {
+exports.registerHandler= (req, res, next) => {
 	let { name, email, password } = req.body;
 
 	
@@ -27,7 +27,7 @@ exports.register = (req, res, next) => {
 };
 
 //this will create the log in. 
-exports.login = (req, res, next) => {
+exports.registerHandler = (req, res, next) => {
 	let { email, password } = req.body;
 
 	// This makes sure feilds are valid. 
@@ -43,7 +43,7 @@ exports.login = (req, res, next) => {
 };
 
 
-exports.user = (req, res, next) => {
+exports.userHandler  = (req, res, next) => {
 	let message;
 	if (!req.user.email_verified && req.user.verification_email_sent)
 		message =

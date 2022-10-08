@@ -1,4 +1,4 @@
-class Error extends Error {
+class ErrorResponse extends Error {
 	constructor(...args) {
 		super(args[0]);
         this.errors = args[2];

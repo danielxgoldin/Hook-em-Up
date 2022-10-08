@@ -1,4 +1,4 @@
-const validator = require('validator');
+const validatorResponse = require('validator');
 class checker {
 	constructor() {}
 	siteURL(url) {
