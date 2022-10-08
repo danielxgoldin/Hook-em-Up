@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-
+//function to handle login functionality
 const Login = () => {
     const { user, login, setUser, setIsSubmitting, loggedIn } = useAuth()
 
+    //set two states for login variables email and password
     const [ email, setEmail ] = useState("")
     const [ password, setPassword ] = useState("")
     
@@ -28,6 +29,7 @@ const Login = () => {
         loggedIn && navigate('/')
     }, [loggedIn])
 
+    //return rendered Login 
     return (
         <div className='Container-group'>
             <div className='Form-group'>
@@ -88,4 +90,5 @@ const Login = () => {
     )
 }
 
+//export Login file
 export default Login
