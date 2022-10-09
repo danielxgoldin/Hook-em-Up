@@ -67,7 +67,60 @@ const Signup = () => {
                             />
                         </div>
                         <div>
-                            
+                           {errors.email && <span className="error">{error.email}</span>}
+                           <label className="in-put">Email</label>
+                           <input
+                           type="email"
+                           className="input"
+                           onChange={handleSignUpFormChange}
+                           value={currentUser.email}
+                           name="email"
+                           placeholder="Email Address"
+                           /> 
+                        </div>
+                        <div>
+                            {errors.password && <span className="error">{errors.password}</span>}
+                            <label className="in-put">Password</label>
+                            <input
+                            type="Password"
+                            className="input"
+                            onChange={handleSignUpFormChange}
+                            value={currentUser.password}
+                            name="password"
+                            placeholder="Password"
+                            />
+                        </div>
+                        <div>
+                            {errors.passwordConfirm && <span className="error">{errors.passwordConfirm}</span>}
+                            <label className="input">Password Confirm</label>
+                            <input
+                            type="Password"
+                            className="input"
+                            onChange={handleSignUpFormChange}
+                            value={currentUser.passwordConfirm}
+                            name="passwordConfirm"
+                            placeholder="Confirm Password"
+                            />
+                        </div>
+                        <div className="links">
+                            <div className="link-div">
+                                <span>
+                                    Already have an account? Login{" "}
+                                    <Link to="/Login" className="text-black-600 hover:underline">
+                                        {" "}
+                                        here.
+                                    </Link>
+                                </span>
+                            </div>
+                        </div>
+                        <div className="text-center">
+                            <button type="submit" className="button">
+                                <IdentificationIcon
+                                    className="my-auto h-5 w-6" 
+                                    aria1-hidden="true"
+                                />
+                                Sign Up!
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -75,3 +128,5 @@ const Signup = () => {
         </div>
     )
 }
+
+export default Signup
