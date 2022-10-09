@@ -20,20 +20,20 @@ var navBar = ({}) => {
                 <ul>
 
                     {/* All the pages, clickable titles that link to them  */}
-                    
-                    <li>
+
+                    <li className="navTitle">
                     <a href="/items">Items</a>
                     </li>
 
-                    <li>
+                    <li className="navTitle">
                         <a href="/login">Login</a>
                     </li>
 
-                    <li>
+                    <li className="navTitle">
                         <a href="/cart">Cart</a>
                     </li>
 
-                    <li>
+                    <li className="navTitle">
                         <a href="/transactions">Transactions</a>
                     </li>
 
