@@ -1,9 +1,8 @@
-import { createContext, useState, useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { createContext, useState, useEffect, useContext } from "react"
+import { useNavigate } from "react-router-dom"
 
 const AuthContext = createContext()
 
-//check local storage if user exist if not make it a new user
 const defaultUser = JSON.parse(localStorage.getItem("user")) || {
   firstName: "",
   lastName: "",
@@ -21,7 +20,6 @@ const AuthProvider = ({ children }) => {
   const [loggedIn, setLoggedIn] = useState(false)
   const [errors, setErrors] = useState({})
 
-  //login functionality
   const login = (email, password) => {
     const userData = Object.values(users)
     const indexOfUser = users.map((item) => item.email).indexOf(email)
@@ -33,7 +31,6 @@ const AuthProvider = ({ children }) => {
     }
   }
 
-  //logout functionality
   const logout = () => {
     localStorage.removeItem("user")
     setCurrentUser({
@@ -47,7 +44,6 @@ const AuthProvider = ({ children }) => {
     setLoggedIn(false)
   }
 
-  //setting local storage data with current user
   useEffect(() => {
     const isEmpty = Object.values(currentUser).every(value => value ? true : false)
     if(Object.keys(errors).length > 0) {

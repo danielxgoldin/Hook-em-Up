@@ -1,95 +1,93 @@
-import { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuth,AuthProvider } from '../../../Assets/js/Auth'
+import { LoginIcon } from '@heroicons/react/outline'
 
-
-//function to handle login functionality
 const Login = () => {
-    const { user, login, setUser, setIsSubmitting, loggedIn } = useAuth()
+const { currentUser, login, setCurrentUser, setIsSubmitting, loggedIn } = useAuth()
 
-    //set two states for login variables email and password
-    const [ email, setEmail ] = useState("")
-    const [ password, setPassword ] = useState("")
-    
-    const emailRef = useRef()
-    const passwordRef = useRef()
 
-    const handleLogin = async (e) => {
-        e.preventDefault()
-        setIsSubmitting(true)
-        try {
-            await login(emailRef.current.value, passwordRef.current.value)
-        } catch {
-            alert('error')
-        }
-        setIsSubmitting(false)
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const emailRef = useRef()
+  const passwordRef = useRef()
+
+  const handleSignIn = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    try {
+      await login(emailRef.current.value, passwordRef.current.value)
+    } catch {
+      alert("Error!")
     }
+    setIsSubmitting(false)
+  }
 
-    const navigate = useNavigate()
+  const navigate = useNavigate()
+  
+  useEffect(() => {
+    loggedIn && navigate('/')
+  }, [loggedIn])
 
-    useEffect(() => {
-        loggedIn && navigate('/')
-    }, [loggedIn])
-
-    //return rendered Login 
-    return (
-        <div className='Container-group'>
-            <div className='Form-group'>
-                <div>
-                    <h2 className='title'>Login</h2>
-                </div>
-                <form
-                autoComplete='off'
-                onSubmit={handleLogin}
-                className="Login-form"
-                >
-                    <div className='input-group'>
-                        <div>
-                            <label className='in-put'>Email</label>
-                            <input
-                                type="Email"
-                                onChange={(e) => setEmail(e.target.value)}
-                                value={email}
-                                ref={emailRef}
-                                className="input"
-                                placeholder='Email Address'
-                                required   
-                            />
-                        </div>
-                        <div>
-                            <label className='in-put'>Password</label>
-                            <input
-                                type="Password"
-                                onChange={(e) => setPassword(e.target.value)}
-                                value={password}
-                                ref={passwordRef}
-                                className='input'
-                                placeholder='Password'
-                                required
-                            />
-                        </div>
-                        <div className='links'>
-                            <div className='links-div'>
-                                <span>
-                                    No Account? Sign Up{" "}
-                                    <Link to="/signup" className="text-black-600 hover:underline">
-                                        {" "}
-                                        here!
-                                    </Link>
-                                </span>
-                            </div>
-                        </div>
-                        <div className='text-center'>
-                            <button type='submit' className='button'>
-                                <LoginIcon className="my-auto h-5 w-6" aria1-hidden="true" />
-                                Login
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+  return (
+    <div className="Container-group">
+      <div className="form-group">
+        <div>
+          <h2 className="title">Login</h2>
         </div>
-    )
+        <form
+          autoComplete="off"
+          onSubmit={handleSignIn}
+          className="login-form"
+        >
+          <div className="input-form">
+            <div>
+              <label className="input">Email</label>
+              <input
+                type="email"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                ref={emailRef}
+                className="in-put"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div>
+              <label className="input">Password</label>
+              <input
+                type="Password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                required
+                className="in-put"
+                placeholder="Password"
+                ref={passwordRef}
+              />
+            </div>
+            <div className="link">
+              <div className="link-div">
+                <span>
+                  Don't have an account? Sign up{" "}
+                  <Link to="/signup" className="text-black-600 hover:underline">
+                    {" "}
+                    here.
+                  </Link>
+                </span>
+              </div>
+            </div>
+            <div className="text-center">
+              <button type="submit" className="button">
+                <LoginIcon className="my-auto h-5 w-6" aria1-hidden="true" />
+                Login
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  )
 }
 
-//export Login file
 export default Login
