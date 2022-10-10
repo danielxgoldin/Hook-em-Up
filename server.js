@@ -16,6 +16,7 @@ const QueryRoot = new graphql.GraphQLObjectType({
 const schema = new graphql.GraphQLSchema({ query: QueryRoot });
 
 const app = express();
+const PORT = process.env.PORT || 3001;
 app.use(
   "/graphql",
   graphqlHTTP({
@@ -38,4 +39,6 @@ mongoose.connect(
 
 mongoose.set("debug", true);
 
-app.listen(4000);
+app.listen(PORT, () =>
+  console.log(`Connected to localhost using PORT:${PORT}`)
+);
