@@ -18,7 +18,7 @@ const productController = {
       .catch((err) => res.status(400).json(err));
   },
 
-  //update pizza by id
+  //update product by id
   updateProduct({ params, body }, res) {
     Product.findOneAndUpdate({ _id: params.id }, body, { new: true })
       .then((dbProductData) => {
