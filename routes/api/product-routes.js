@@ -14,7 +14,7 @@ router.route("/").get(getAllProduct).post(createProduct);
 // Set up GET one, PUT, and DELETE at /api/product/:id
 router
   .route("/:id")
-  .get(getProductById)
+  /*  .get(getProductById) */
   .put(updateProduct)
   .delete(deleteProduct);
 
