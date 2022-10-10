@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useAuth,AuthProvider } from '../../../Assets/js/Auth'
-import { LoginIcon } from '@heroicons/react/outline'
+import { useAuth, AuthProvider } from '../../../Assets/js/Auth'
 import '../../../Assets/css/login.css';
 
 const Login = () => {

@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../../Assets/js/Auth'
 import validations from './validations'
+import '../../../Assets/css/signup.css';
 
 const Signup = () => {
   const {
@@ -34,7 +35,7 @@ const Signup = () => {
   }
 
   return (
-    <div className="Container-group">
+    <div className="">
       <div className="form-group">
         <div>
           <h2 className="title">Sign Up</h2>
@@ -42,7 +43,7 @@ const Signup = () => {
         <form
           autoComplete="off"
           onSubmit={handleSignUpSubmit}
-          className="login-form"
+          className="modal-content animate"
         >
           <div className="input-form">
             <div>
@@ -124,10 +125,6 @@ const Signup = () => {
             </div>
             <div className="text-center">
               <button type="submit" className="button">
-                <IdentificationIcon
-                  className="my-auto h-5 w-6"
-                  aria1-hidden="true"
-                />
                 Sign Up
               </button>
             </div>
