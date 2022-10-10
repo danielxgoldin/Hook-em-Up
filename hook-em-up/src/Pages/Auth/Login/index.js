@@ -32,7 +32,7 @@ const { currentUser, login, setCurrentUser, setIsSubmitting, loggedIn } = useAut
   }, [loggedIn])
 
   return (
-    <div className="Container-group">
+    <div className="">
       <div className="form-group">
         <div>
           <h2 className="title">Login</h2>
@@ -40,11 +40,13 @@ const { currentUser, login, setCurrentUser, setIsSubmitting, loggedIn } = useAut
         <form
           autoComplete="off"
           onSubmit={handleSignIn}
-          className="login-form"
+          className="modal-content animate"
         >
-          <div className="input-form">
-            <div>
+           <span className="close" title="Close Modal">&times;</span>
+          <div className="container">
               <label className="input">Email</label>
+              <br></br>
+
               <input
                 type="email"
                 onChange={(e) => setEmail(e.target.value)}
@@ -54,8 +56,7 @@ const { currentUser, login, setCurrentUser, setIsSubmitting, loggedIn } = useAut
                 placeholder="Email Address"
                 required
               />
-            </div>
-            <div>
+              <br></br>
               <label className="input">Password</label>
               <input
                 type="Password"
@@ -66,9 +67,8 @@ const { currentUser, login, setCurrentUser, setIsSubmitting, loggedIn } = useAut
                 placeholder="Password"
                 ref={passwordRef}
               />
-            </div>
-            <div className="link">
-              <div className="link-div">
+              <div className="link">
+                <div className="link-div">
                 <span>
                   Don't have an account? Sign up{" "}
                   <Link to="/signup" className="text-black-600 hover:underline">
@@ -78,9 +78,9 @@ const { currentUser, login, setCurrentUser, setIsSubmitting, loggedIn } = useAut
                 </span>
               </div>
             </div>
+            
             <div className="text-center">
               <button type="submit" className="button">
-                <LoginIcon className="my-auto h-5 w-6" aria1-hidden="true" />
                 Login
               </button>
             </div>
