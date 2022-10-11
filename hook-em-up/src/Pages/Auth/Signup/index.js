@@ -1,4 +1,3 @@
-import { IdentificationIcon } from '@heroicons/react/outline'
 import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../../Assets/js/Auth'

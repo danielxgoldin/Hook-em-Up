@@ -8,6 +8,10 @@ input {
     box-sizing: border-box;
   }
 
+.container {
+    background: linear-gradient(rgb(181, 75, 8), rgb(255, 255, 255));
+}
+
 .input-form {
     margin: 10px;
     padding: 15px;
@@ -15,7 +19,7 @@ input {
   
   /* Set a style for all buttons */
   button {
-    background-color: #04AA6D;
+    /*background-color: #04AA6D;*/
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -32,7 +36,7 @@ input {
   .cancelbtn {
     width: auto;
     padding: 10px 18px;
-    background-color: #ff1909cd;
+    /*background-color: #ff1909cd;*/
   }
   
   /* Center the image and position the close button */
@@ -49,13 +53,13 @@ input {
   
   .container {
     padding: 16px;
-    background-color: #ff1909cd;
+    /*background-color: #ff1909cd;*/
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
-    color: blanchedalmond;
+    color: white;
     justify-content: center;
     text-align: center;
   }
@@ -82,9 +86,9 @@ input {
   
   /* Modal Content/Box */
   .modal-content {
-    background-color: #fefefe;
+    background-color: rgb(244, 236, 236);
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
+    border: 2px solid rgb(184, 173, 173);
     width: 80%; /* Could be more or less, depending on screen size */
   }
   
