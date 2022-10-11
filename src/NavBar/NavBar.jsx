@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 // importing react.js
 
 // calls the navbar
@@ -17,22 +18,28 @@ var navBar = ({}) => {
       <div id="navbar" className="navbar-collapse">
         <ul>
           {/* All the pages, clickable titles that link to them  */}
-
-          <li className="navTitle">
-            <a href="/items">Items</a>
-          </li>
-
-          <li className="navTitle">
-            <a href="/login">Login</a>
-          </li>
-
-          <li className="navTitle">
-            <a href="/cart">Cart</a>
-          </li>
-
-          <li className="navTitle">
-            <a href="/transactions">Transactions</a>
-          </li>
+          <Routes>
+            <li className="navTitle">
+              <Route to="/items">
+                <p>Items</p>
+              </Route>
+            </li>
+            <li className="navTitle">
+              <Route to="/login">
+                <p>Login</p>
+              </Route>
+            </li>
+            <li className="navTitle">
+              <Route to="/cart">
+                <p>Cart</p>
+              </Route>
+            </li>
+            <li className="navTitle">
+              <Route to="/transactions">
+                <p>Transactions</p>
+              </Route>
+            </li>
+          </Routes>
         </ul>
       </div>
     </nav>
