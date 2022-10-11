@@ -8,9 +8,7 @@ input {
     box-sizing: border-box;
   }
 
-.container {
-    background: white;
-}
+
 
 .input-form {
     margin: 10px;
@@ -19,7 +17,7 @@ input {
   
   /* Set a style for all buttons */
   button {
-    background-color: orange;
+    background-color: rgb(225, 90, 0);
     color: black;
     padding: 14px 20px;
     margin: 8px 0;
@@ -31,7 +29,7 @@ input {
   button:hover {
     opacity: 0.8;
     background-color: rgb(232, 232, 232);
-    color: orange;
+    color: rgb(225, 90, 0);
   }
   
   /* Extra styles for the cancel button */
@@ -53,11 +51,7 @@ input {
     border-radius: 50%;
   }
   
-  .container {
-    padding: 16px;
-    /*background-color: #ff1909cd;*/
-  }
-
+ 
   .title {
     font-size: 1.5rem;
     margin-top: 1rem;

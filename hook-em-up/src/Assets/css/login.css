@@ -8,9 +8,7 @@ input {
   box-sizing: border-box;
 }
 
-.container {
-  background: white;
-}
+
 
 .input-form {
   margin: 10px;
@@ -19,7 +17,7 @@ input {
 
 /* Set a style for all buttons */
 button {
-  background-color: orange;
+  background-color:rgb(225, 90, 0);
   color: black;
   padding: 14px 20px;
   margin: 8px 0;
@@ -31,12 +29,11 @@ button {
 button:hover {
   opacity: 0.8;
   background-color: rgb(232, 232, 232);
-  color: orange;
+  color: rgb(225, 90, 0);
 }
 
 .container {
   padding: 16px;
-  background: white;
 }
 
 .title {
