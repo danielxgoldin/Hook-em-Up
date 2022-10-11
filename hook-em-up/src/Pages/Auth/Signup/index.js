@@ -36,14 +36,14 @@ const Signup = () => {
   return (
     <div className="">
       <div className="form-group">
-        <div>
-          <h2 className="title">Sign Up</h2>
-        </div>
         <form
           autoComplete="off"
           onSubmit={handleSignUpSubmit}
           className="modal-content animate"
         >
+        <div>
+          <h2 className="title">Sign Up</h2>
+        </div>
           <div className="input-form">
             <div>
             {errors.firstName && <span className="error">{errors.firstName}</span>}

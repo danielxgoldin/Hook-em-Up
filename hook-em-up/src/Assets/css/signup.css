@@ -4,12 +4,12 @@ input {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(0, 0, 0);
     box-sizing: border-box;
   }
 
 .container {
-    background: linear-gradient(rgb(181, 75, 8), rgb(255, 255, 255));
+    background: white;
 }
 
 .input-form {
@@ -19,8 +19,8 @@ input {
   
   /* Set a style for all buttons */
   button {
-    /*background-color: #04AA6D;*/
-    color: white;
+    background-color: orange;
+    color: black;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -30,6 +30,8 @@ input {
   
   button:hover {
     opacity: 0.8;
+    background-color: rgb(232, 232, 232);
+    color: orange;
   }
   
   /* Extra styles for the cancel button */
@@ -57,9 +59,9 @@ input {
   }
 
   .title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: black;
     justify-content: center;
     text-align: center;
   }

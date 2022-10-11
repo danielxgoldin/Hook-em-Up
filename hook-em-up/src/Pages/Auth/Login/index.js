@@ -33,15 +33,14 @@ const { currentUser, login, setCurrentUser, setIsSubmitting, loggedIn } = useAut
   return (
     <div className="">
       <div className="form-group">
-        <div>
-          <h2 className="title">Login</h2>
-        </div>
         <form
           autoComplete="off"
           onSubmit={handleSignIn}
           className="modal-content animate"
         >
-           <span className="close" title="Close Modal">&times;</span>
+        <div>
+          <h2 className="title">Login</h2>
+        </div>
           <div className="container">
               <label className="input">Email</label>
               <br></br>

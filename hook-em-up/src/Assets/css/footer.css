@@ -1,3 +1,14 @@
 .container__footer-container {
-    border: 2px black;
+    display: grid;
+    border: 1px solid black;
+}
+
+.container__footer-box {
+    display: grid;
+    grid-template-columns: 50%;
+}
+
+.row {
+    display: flex;
+    gap: 2rem;
 }
