@@ -19,7 +19,7 @@ exports.checkAuthentication = asyncHandler((req, res, next) => {
 		token = req.cookies.DEV_TOKEN;
 	}
 
-	// this will see if there is an avalible token 
+	// this will see if there is an availble token 
 	if (!token) {
 		
 		if (
