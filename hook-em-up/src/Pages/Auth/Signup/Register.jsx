@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../../Assets/js/Auth'
-import validations from './validations'
+// import validations from './validations'
 import '../../../Assets/css/signup.css';
 
 const Signup = () => {
@@ -27,7 +27,7 @@ const Signup = () => {
 
   const handleSignUpSubmit = (e) => {
     e.preventDefault()
-    setErrors(validations(currentUser, users)) 
+    // setErrors(validations(currentUser, users)) 
     setIsSubmitting(true)
     localStorage.setItem('user', JSON.stringify(currentUser))
     localStorage.setItem('users', JSON.stringify(users))
