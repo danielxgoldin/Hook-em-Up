@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import Login from './Pages/Auth/Login';
-import Signup from './Pages/Auth/Signup'
+import Login from './Pages/Auth/Login/Login';
+import Signup from './Pages/Auth/Signup/Register'
 import Container from './Components/Container'
 import Footer from './Components/Footer'
 
