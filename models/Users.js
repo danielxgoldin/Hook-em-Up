@@ -8,6 +8,9 @@ const UsersSchema = new Schema({
   email: {
     type: String,
   },
+  password: {
+    type: String,
+  },
 });
 
 module.exports = Users;
