@@ -1,7 +1,6 @@
 const { User } = require("../models");
 
 const userController = {
-  // get all users
   getAllUsers(req, res) {
     Product.find({})
       .then((dbUserData) => res.json(dbUserData))
@@ -11,14 +10,12 @@ const userController = {
       });
   },
 
-  //createUser
   createUser({ body }, res) {
     Product.create(body)
       .then((dbProductData) => res.json(dbProductData))
       .catch((err) => res.status(400).json(err));
   },
 
-  //update user by id
   updateUser({ params, body }, res) {
     User.findOneAndUpdate({ _id: params.id }, body, { new: true })
       .then((dbUserData) => {
@@ -31,7 +28,6 @@ const userController = {
       .catch((err) => res.status(400).json(err));
   },
 
-  //delete user
   deleteUser({ params }, res) {
     User.findOneAndDelete({ _id: params.id })
       .then((dbUserData) => {
