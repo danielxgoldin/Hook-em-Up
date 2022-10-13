@@ -1,8 +1,8 @@
-const { User } = require("../models");
+const { Users } = require("../models/index");
 
 const userController = {
   getAllUsers(req, res) {
-    Product.find({})
+    Users.find({})
       .then((dbUserData) => res.json(dbUserData))
       .catch((err) => {
         console.log(err);
@@ -11,13 +11,13 @@ const userController = {
   },
 
   createUser({ body }, res) {
-    Product.create(body)
-      .then((dbProductData) => res.json(dbProductData))
+    Users.create(body)
+      .then((userData) => res.json(userData))
       .catch((err) => res.status(400).json(err));
   },
 
   updateUser({ params, body }, res) {
-    User.findOneAndUpdate({ _id: params.id }, body, { new: true })
+    Users.findOneAndUpdate({ _id: params.id }, body, { new: true })
       .then((dbUserData) => {
         if (!dbUserData) {
           res.status(404).json({ message: "No user found with this id!" });
@@ -29,7 +29,7 @@ const userController = {
   },
 
   deleteUser({ params }, res) {
-    User.findOneAndDelete({ _id: params.id })
+    Users.findOneAndDelete({ _id: params.id })
       .then((dbUserData) => {
         if (!dbUserData) {
           res.status(404).json({ message: "No user found with this id" });

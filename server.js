@@ -41,7 +41,7 @@ mongoose.connect(
 mongoose.set("debug", true);
 
 app.listen(PORT, () =>
-  console.log(`Connected to localhost using PORT:${PORT}`)
+  console.log(`App running on http://localhost:${PORT}/graphql`)
 ); */
 
 //known working server code from p-hunt
@@ -58,6 +58,7 @@ app.use(express.static("public"));
 
 app.use(require("./routes"));
 
+//connection to the db
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/Hook-em-up",
   {
