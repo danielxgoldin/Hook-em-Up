@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useAuth, AuthProvider } from '../../../Assets/js/Auth'
-import '../../../Assets/css/login.css';
+import { useAuth, AuthProvider } from '../../Assets/js/Auth'
+import './login.css';
 
 const Login = () => {
 const { currentUser, login, setCurrentUser, setIsSubmitting, loggedIn } = useAuth()

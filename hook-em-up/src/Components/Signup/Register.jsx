@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useAuth } from '../../../Assets/js/Auth'
-import validations from './validations'
-import '../../../Assets/css/signup.css';
+import { useAuth } from '../../Assets/js/Auth'
+import './register.css';
+import validations from '../../Assets/js/validations';
 
 const Signup = () => {
   const {

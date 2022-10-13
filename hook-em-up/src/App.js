@@ -1,10 +1,9 @@
 import React from 'react'
-import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import Login from './Pages/Auth/Login/Login';
-import Signup from './Pages/Auth/Signup/Register'
-import Container from './Components/Container'
-import Footer from './Components/Footer'
+import Login from './Components/Login/Login';
+import Signup from './Components/Signup/Register'
+import Container from './Components/Container/Container'
+import Footer from './Components/Footer/Footer'
 
 function App() {
   return (
