@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/danielxgoldin/Hook-em-Up#readme",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express-graphql": "^0.12.0",
     "graphql": "^16.6.0",
+    "mongoose": "^6.6.5",
     "react": "^18.2.0",
     "react-scripts": "5.0.1"
   }
