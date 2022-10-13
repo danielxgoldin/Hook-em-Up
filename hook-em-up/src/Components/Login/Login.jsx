@@ -41,7 +41,7 @@ const { currentUser, login, setCurrentUser, setIsSubmitting, loggedIn } = useAut
         <div>
           <h2 className="title">Login</h2>
         </div>
-          <div className="container">
+          <div className="containers">
               <label className="input">Email</label>
               <br></br>
 

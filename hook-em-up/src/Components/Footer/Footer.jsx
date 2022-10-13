@@ -9,12 +9,8 @@ import { AiFillFacebook } from 'react-icons/ai'
 const Footer = () => {
   return (
     <footer>
-        <a href='#' className='footer__logo'><GiBullHorns /></a>
+        <a href='#' className='footer__logo'><GiBullHorns /> Hook-Em-Up</a>
 
-        <div className='footer__text'>
-            <p>Hook-em-up</p>
-            <small>all rights reserved</small>
-        </div>
 
         <div className='footer__socials'>
             <a href='https://facebook.com'><AiFillFacebook /></a>
