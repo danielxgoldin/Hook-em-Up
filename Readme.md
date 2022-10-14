@@ -1,5 +1,5 @@
 
-# Hooke-em-Up
+# Hook-em-Up
 
 A peer-2-peer marketplace webapp where UT students can go to buy, sell, and trade textbooks, furniture, and more.
 ## Technologies Used
