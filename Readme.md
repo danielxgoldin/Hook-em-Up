@@ -10,10 +10,6 @@ A peer-2-peer marketplace webapp where UT students can go to buy, sell, and trad
 * mongodb
 * mongoose
 * react
-* graphql
-* graphql
-* graphql
-* graphql
 
 
 
